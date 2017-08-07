@@ -1,0 +1,15 @@
+<div class="container">
+  <% start_time = Time.now %>
+  <h2>The random grid :</h2>
+  <p><%=@grid%></p>
+
+  <p></p>
+
+  <h2> Your guess : </h2>
+  <form action="/score" method="get">
+    <input type="text"  name="query" placeholder="word">
+    <input class="btn btn-primary" type="submit" value="check">
+    <input type="hidden" name="grid" value= "<%=@grid%>">
+    <input type="hidden" name="start_time" value="<%=start_time%>">
+  </form>
+</div>
